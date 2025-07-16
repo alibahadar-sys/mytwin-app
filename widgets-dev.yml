@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DB:my_twins}
+#      username: ${MONGODB_USERNAME:mytwin}
+#      password: ${MONGODB_PASSWORD:Mytwin_123}
+      auto-index-creation: true
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+
