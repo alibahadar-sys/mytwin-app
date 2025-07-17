@@ -1,0 +1,26 @@
+spring:
+  data:
+    mongodb:
+      host: ${UAT_MONGODB_HOST}
+      port: ${UAT_MONGODB_PORT}
+      database: ${UAT_MONGODB_DB}
+      username: ${UAT_MONGODB_USERNAME}
+      password: ${UAT_MONGODB_PASSWORD}
+      auto-index-creation: true
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://uat-mytwin-eureka-service/eureka/
+  instance:
+    preferIpAddress: true
+
+graph:
+  api:
+    base-url: https://graph.microsoft.com.rproxy.goskope.com/v1.0
+    me-url: /me
+    direct-reports-url: /me/directReports
+    photo-value-url:   /me/photo/$value
