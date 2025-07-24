@@ -1,22 +1,8 @@
 spring:
   data:
     mongodb:
-      host: ${UAT_MONGODB_HOST}
-      port: ${UAT_MONGODB_PORT}
-      database: ${UAT_MONGODB_DB}
-      username: ${UAT_MONGODB_USERNAME}
-      password: ${UAT_MONGODB_PASSWORD}
+      uri: mongodb://${UAT_MONGODB_USERNAME}:${UAT_MONGODB_PASSWORD}@${UAT_MONGODB_HOST}:${UAT_MONGODB_PORT}/${UAT_MONGODB_DB}?authSource=admin
       auto-index-creation: true
-
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://uat-mytwin-eureka-service/eureka/
-  instance:
-    preferIpAddress: true
 
 graph:
   api:
