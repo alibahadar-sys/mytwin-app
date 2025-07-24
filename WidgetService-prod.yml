@@ -1,19 +1,5 @@
 spring:
   data:
     mongodb:
-      host: ${PROD_MONGODB_HOST}
-      port:  ${PROD_MONGODB_PORT}
-      database:  ${PROD_MONGODB_DATABASE}
-      username:  ${PROD_MONGODB_USERNAME}
-      password:  ${PROD_MONGODB_PASSWORD}
+      uri: mongodb://${PROD_MONGODB_USERNAME:mytwin}:${PROD_MONGODB_PASSWORD:Mytwin_123}@${PROD_MONGODB_HOST:localhost}:${PROD_MONGODB_PORT:27017}/${PROD_MONGODB_DB:my_twins}?authSource=admin
       auto-index-creation: true
-
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://prod-eureka-server:8761/eureka/
-  instance:
-    preferIpAddress: true
