@@ -1,5 +1,5 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://${UAT_MONGODB_USERNAME:mytwin}:${UAT_MONGODB_PASSWORD:Mytwin_123}@${UAT_MONGODB_HOST:localhost}:${UAT_MONGODB_PORT:27017}/${UAT_MONGODB_DB:my_twins}?authSource=admin
+      uri: mongodb://${UAT_MONGODB_USERNAME}:${UAT_MONGODB_PASSWORD}@${UAT_MONGODB_HOST}:${UAT_MONGODB_PORT}/${UAT_MONGODB_DB}?authSource=admin
       auto-index-creation: true
